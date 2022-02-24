@@ -4,7 +4,7 @@ if(isset($_POST['contactform']))
     if(!empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['age']))
     {
         $header="MIME-Version: 1.0\r\n";
-        $header.='From:"Philibert Gentien"<philibert.gentien@gmail.com>'."\n";
+        $header.='From:"Votre nom"<your.email@gmail.com>'."\n";
         $header.='Content-Type:text/html; charset="uft-8"'."\n";
         $header.='Content-Transfer-Encoding: 8bit';
 
@@ -21,7 +21,7 @@ if(isset($_POST['contactform']))
         </html>        
         ';
 
-        mail("philibert.gentien@gmail.com", "CONTACT - coursparticulier.fr", $message, $header);
+        mail("votre-email", "Sujet", $message, $header);
         $msg="Votre message a bien été envoyé !";
     }
     else
